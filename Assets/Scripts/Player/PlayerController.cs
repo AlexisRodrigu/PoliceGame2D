@@ -54,11 +54,6 @@ public class PlayerController : MonoBehaviour
         AnimacionesSetup(); //Iniciamos animaciones setup
     }
 
-    void Update()
-    {
-
-        
-    }
     void FixedUpdate()
     {
         Movement();
