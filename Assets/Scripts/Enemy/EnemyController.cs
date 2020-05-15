@@ -114,11 +114,8 @@ public class EnemyController : MonoBehaviour
             spriteRenEnemy.flipX = false;
         }else{
             spriteRenEnemy.flipX = true;
-        }
-         
+        }    
     }
-
-   
 }
 
 

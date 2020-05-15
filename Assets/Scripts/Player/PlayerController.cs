@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
 
     public Rigidbody2D rb;
-    [SerializeField]public SpriteRenderer spriteRenderer;
+    [SerializeField] public SpriteRenderer spriteRenderer;
 
     [Header("Animaciones")]
     private Animator anim;
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private int playerAttackID;
     [SerializeField] private bool isAttack;
 
-     #region  Singleton
+    #region  Singleton
     private static PlayerController instance = null;
 
     // Game Instance Singleton
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         {
             Atacar();
             isAttack = true;
-        }  
+        }
     }
     #endregion
     void AnimacionesSetup()
@@ -81,11 +81,7 @@ public class PlayerController : MonoBehaviour
     void Atacar()
     {
         anim.SetTrigger(playerAttackID);
-        
-
     }
-
-
     void Movement()
     {
         rb.velocity = inputVector * speed * Time.deltaTime;
@@ -99,5 +95,5 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
     }
-   
+
 }

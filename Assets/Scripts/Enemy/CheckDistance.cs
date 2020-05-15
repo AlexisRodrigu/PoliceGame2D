@@ -15,20 +15,21 @@ public class CheckDistance : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
     }
-  private void Update() {
-       
+    private void Update()
+    {
+
     }
     void FixedUpdate()
     {
         // Cast a ray straight down.
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-         float distance = Mathf.Abs(hit.point.y - player.transform.position.x);
+        float distance = Mathf.Abs(hit.point.y - player.transform.position.x);
         // If it hits something...
         if (hit.collider != null)
         {
             // Calculate the distance from the surface and the "error" relative
             // to the floating height.
-        
+
             float heightError = floatHeight - distance;
 
             // The force is proportional to the height error, but we remove a part of it
@@ -37,11 +38,6 @@ public class CheckDistance : MonoBehaviour
 
             // Apply the force to the rigidbody.
             rb2D.AddForce(Vector3.up * force);
-
-   
-            
         }
-            
-           
     }
 }

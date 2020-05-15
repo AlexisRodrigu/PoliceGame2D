@@ -6,7 +6,7 @@ using TMPro;
 public class Items : MonoBehaviour
 {
     private TextMeshProUGUI txtCash;
- 
+
     Items items;
     public int bagsRecovery;
 
@@ -19,9 +19,9 @@ public class Items : MonoBehaviour
     {
         AddBags();
     }
-
-    void AddBags(){
-        if(TxtScore.score >= 1)
+    void AddBags()
+    {
+        if (TxtScore.score >= 1)
         {
             txtCash.text = "" + bagsRecovery + 1;
         }

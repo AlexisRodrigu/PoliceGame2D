@@ -30,8 +30,7 @@ public class LifeEnemy : MonoBehaviour
       }
       if(life <= 0){
           isAlive = false;
-          enemyControllerScript.Die();
-          
+          enemyControllerScript.Die();          
       }
   }
 }

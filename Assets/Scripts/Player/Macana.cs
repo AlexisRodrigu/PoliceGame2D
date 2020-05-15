@@ -23,8 +23,6 @@ public class Macana : MonoBehaviour
         {
             Instantiate(bloodGO,transform.position,transform.rotation);
           
-   
-
         } 
    }
     private void PositionPlayer (){

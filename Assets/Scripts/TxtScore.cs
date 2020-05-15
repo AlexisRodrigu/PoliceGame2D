@@ -4,8 +4,6 @@ using UnityEngine;
 using TMPro;
 public class TxtScore : MonoBehaviour
 {
-
-
     public GameObject player;
     public static int score;
     private int initialScore = 0;
@@ -20,7 +18,6 @@ public class TxtScore : MonoBehaviour
         
         maxScore = PlayerPrefs.GetInt("PuntajeMaximo", 0);//Almacena el puntaje
     }
-  
     public  void ScoreAdd()
     {
         score++;

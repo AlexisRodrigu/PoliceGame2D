@@ -6,13 +6,10 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;
-
     public Transform playerTransform; //Jugador instanciado
+    [SerializeField]
 
-   
-    [SerializeField] 
-
-   #region  Singleton
+    #region  Singleton
     public static GameManager Instance
     {
         get
@@ -34,12 +31,13 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-   private void Start()
+    private void Start()
     {
-        InstanciaDePlayer(); 
+        InstanciaDePlayer();
     }
 
-    private void InstanciaDePlayer(){
-         Instantiate(playerTransform, new Vector2(-1.95f, -2.95f), Quaternion.identity);
+    private void InstanciaDePlayer()
+    {
+        Instantiate(playerTransform, new Vector2(-1.95f, -2.95f), Quaternion.identity);
     }
 }
